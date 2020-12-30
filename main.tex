@@ -1,0 +1,87 @@
+%\documentclass[UTF8]{ctexart}
+
+%\begin{document}
+
+%你好Latex！
+%\heiti 你好
+%\fontsize{20pt}{20pt}\songti 你好
+%\end{document}
+
+\documentclass[11pt,a4paper,UTF8]{ctexart}
+\input{preamble.tex}
+
+\begin{document}
+%\begin{thebibliography}{99}	
+	%================== 中英文摘要 ============
+	% A 中英文摘要、关键词 
+	\pagenumbering{Roman}
+	\input{chinese_abstract.tex}
+	\newpage
+	
+	\input{english_abstract.tex}
+	\newpage
+	
+	%================== 目录 =================
+	% B 目录
+	%\pagenumbering{roman}
+	\thispagestyle{empty}
+	\tableofcontents
+	\thispagestyle{empty}
+	%\setcounter{section}{1}
+	\newpage
+	
+	%================== 引言  ================
+	% C 引言
+	
+	\pagenumbering{arabic}
+	\input{introduction.tex}
+	\newpage 
+	
+	%=================== 背景知识 =============
+	% D 背景知识
+	\input{background.tex} % 
+	\newpage 
+	
+	%=================== 第一个点 ===============
+	% E 第一个点
+	\input{first.tex}
+	\newpage
+	
+	%=================== 第二个点 ===============
+	% F 第二个点
+	\input{second.tex}
+	\newpage
+	
+	%=================== 第三个点 ============
+	% G 第三个点
+	\input{third.tex}
+	\newpage 
+	
+	%=================== 总结与展望 ============
+	% H 总结与展望
+	\input{conclusion.tex}
+	\newpage 
+	
+	%==================== 参考文献 ===========
+	% I 参考文献
+	%\input{references.tex}
+	\pagestyle{fancy}			% 
+	\chead{}	% 页眉中部
+	\lhead{基于任务推断的元强化学习}		% 页眉左部，设为空
+	\rhead{参考文献}		% 页眉右部，设为空
+	\addcontentsline{toc}{section}{参考文献}	
+	\bibliographystyle{IEEEtran} %参考文献样式
+	\bibliography{references}    %bib文件    
+	
+	%\newpage 
+	
+	%==================== 致谢  =============
+	% G 致谢
+	%\input{acknowlegements.tex}
+	%\newpage
+	
+	%==================== 附录 ===============
+	% H 附录 (符号说明，原始材料等)
+	%\input{appendix.tex}
+%\end{thebibliography}
+\end{document}
